@@ -1,4 +1,5 @@
-#+TITLE: Mi News App
+Mi News App
+===========
 
 * Introducción
 * Requisitos

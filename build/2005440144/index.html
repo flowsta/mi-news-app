@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Incendio en CAÑIZAR DEL OLIVAR en ARAGON</title>
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+  </head>
+  <body>
+        <div id="map" style="width:100%; height:400px;"></div>
+        <h1>Incendio en CAÑIZAR DEL OLIVAR (ARAGON)</h1>
+	<p>El incendio que afectó al municipio de CAÑIZAR DEL OLIVAR quemó una superficie forestal de 324.5000} de la comarca de CUENCAS MINERAS de la provincia de TERUEL (ARAGON).</p>
+	<p>Se inició en 2005-07-17, se controló en 1170  y se extinguió en 2940.</p>
+	<p>La causa del incendio fue FUMADORES. En la extinción del incendio participaron 226 personas, 16 vehiculos pesados y 8 medios aereos. Hubo 0 muertos y 2 heridos.</p>
+
+        <script type="text/javascript">
+            var map = L.map('map').setView([40.81698900, -0.61441300], 8);
+            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+                subdomains: ['otile1','otile2','otile3','otile4']
+            });
+            map.addLayer(mapquestLayer);
+            var marker = L.marker([40.81698900, -0.61441300]).addTo(map);
+        </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Incendio en GUIRGUILLANO en NAVARRA</title>
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+  </head>
+  <body>
+        <div id="map" style="width:100%; height:400px;"></div>
+        <h1>Incendio en GUIRGUILLANO (NAVARRA)</h1>
+	<p>El incendio que afectó al municipio de GUIRGUILLANO quemó una superficie forestal de 268.3000} de la comarca de ZONA 4 de la provincia de NAVARRA (NAVARRA).</p>
+	<p>Se inició en 2005-09-03, se controló en 1030  y se extinguió en 2612.</p>
+	<p>La causa del incendio fue Sin datos. En la extinción del incendio participaron 105 personas, 16 vehiculos pesados y 7 medios aereos. Hubo 0 muertos y 0 heridos.</p>
+
+        <script type="text/javascript">
+            var map = L.map('map').setView([42.72288700, -1.86240000], 8);
+            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+                subdomains: ['otile1','otile2','otile3','otile4']
+            });
+            map.addLayer(mapquestLayer);
+            var marker = L.marker([42.72288700, -1.86240000]).addTo(map);
+        </script>
+  </body>
+</html>

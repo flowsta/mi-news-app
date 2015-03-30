@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Incendio en ESTRADA, A en GALICIA</title>
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+  </head>
+  <body>
+        <div id="map" style="width:100%; height:400px;"></div>
+        <h1>Incendio en ESTRADA, A (GALICIA)</h1>
+	<p>El incendio que afectó al municipio de ESTRADA, A quemó una superficie forestal de 145.4700} de la comarca de DEZA-TABEIROS de la provincia de PONTEVEDRA (GALICIA).</p>
+	<p>Se inició en 2001-12-23, se controló en 1037  y se extinguió en 1042.</p>
+	<p>La causa del incendio fue Provocados por cazadores para facilitar la caza. En la extinción del incendio participaron 17 personas, 0 vehiculos pesados y 1 medios aereos. Hubo 0 muertos y 0 heridos.</p>
+
+        <script type="text/javascript">
+            var map = L.map('map').setView([42.63237000, -8.39982500], 8);
+            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+                subdomains: ['otile1','otile2','otile3','otile4']
+            });
+            map.addLayer(mapquestLayer);
+            var marker = L.marker([42.63237000, -8.39982500]).addTo(map);
+        </script>
+  </body>
+</html>

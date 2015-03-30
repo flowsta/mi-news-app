@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Incendio en NEGREIRA en GALICIA</title>
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+  </head>
+  <body>
+        <div id="map" style="width:100%; height:400px;"></div>
+        <h1>Incendio en NEGREIRA (GALICIA)</h1>
+	<p>El incendio que afectó al municipio de NEGREIRA quemó una superficie forestal de 143.0000} de la comarca de BARBANZA de la provincia de A CORUÑA (GALICIA).</p>
+	<p>Se inició en 2006-08-11, se controló en 1715  y se extinguió en 1758.</p>
+	<p>La causa del incendio fue Otras motivaciones. En la extinción del incendio participaron 21 personas, 5 vehiculos pesados y 3 medios aereos. Hubo 0 muertos y 0 heridos.</p>
+
+        <script type="text/javascript">
+            var map = L.map('map').setView([42.91997600, -8.80888100], 8);
+            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+                subdomains: ['otile1','otile2','otile3','otile4']
+            });
+            map.addLayer(mapquestLayer);
+            var marker = L.marker([42.91997600, -8.80888100]).addTo(map);
+        </script>
+  </body>
+</html>
